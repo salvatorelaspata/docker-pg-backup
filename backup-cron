@@ -1,0 +1,1 @@
+0 2 * * * /backup-script.sh  # Esegui ogni giorno alle 2:00

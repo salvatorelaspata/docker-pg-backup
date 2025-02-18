@@ -1,0 +1,9 @@
+services:
+  backup:
+    build: .
+    container_name: neon-backup
+    env_file:
+      - .env
+    volumes:
+      - ./backups:/backups
+    restart: unless-stopped
