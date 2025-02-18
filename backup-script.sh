@@ -1,8 +1,9 @@
 # Carica le variabili d'ambiente
 PG_URI="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}"
 
-fulldate = $(date +%Y%m%d%H%M%S)
-filename = "${POSTGRES_DB}-${fulldate}.sql"
+fulldate=$(date +%Y%m%d%H%M%S)
+
+filename="${POSTGRES_DB}-${fulldate}.sql"
 
 echo "Starting backup... ${filename}"
 
@@ -17,3 +18,6 @@ else
 fi
 
 echo "Backup completato"
+
+# Cancella i backup più vecchi di 7 giorni
+find /backups -type f -name "*.sql" -mtime +7 -exec rm {} \;

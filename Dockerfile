@@ -6,9 +6,10 @@ RUN apk add --no-cache postgresql-client
 # Copia lo script di backup e il cronjob
 COPY backup-script.sh /backup-script.sh
 COPY backup-cron /etc/crontabs/root
+COPY restore-script.sh /restore-script.sh
 
 # Rendi eseguibile lo script
-RUN chmod +x /backup-script.sh
+RUN chmod +x /backup-script.sh /restore-script.sh
 
 # Avvia il cron daemon in foreground
 CMD ["crond", "-f"]
