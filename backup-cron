@@ -1,3 +1,7 @@
 # 0 2 * * * /backup-script.sh  # Esegui ogni giorno alle 2:00
 
-*/1 * * * * /backup-script.sh  # Esegui ogni 5 minuti
+
+# */1 * * * * /backup-script.sh  # Esegui ogni 5 minuti
+
+
+0 * * * * /backup-script.sh # ogni ora
