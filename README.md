@@ -18,19 +18,23 @@ The backups are stored in the `backups` directory.
 
 ## Cron Job
 
-The cron job is defined in the [backup-cron](backup-cron) file.
+The cron job is defined in the [`backup-cron`](backup-cron) file.
 
 ## Backup Script
 
-The backup script is defined in the [backup-script.sh](backup-script.sh) file.
+The backup script is defined in the [`backup-script.sh`](backup-script.sh) file.
+
+[`Dockerfile.backup`](Dockerfile.backup) is the Dockerfile for the backup script.
+
+## Restore Script
+
+The restore script is defined in the [`restore-script.sh`](restore-script.sh) file.
+
+[`Dockerfile.restore`](Dockerfile.restore) is the Dockerfile for the restore script.
 
 ## Docker Compose
 
-The docker compose file is defined in the [docker-compose.yml](docker-compose.yml) file.
-
-## Dockerfile
-
-The dockerfile is defined in the [Dockerfile](Dockerfile) file.
+The docker compose file is defined in the [`compose.yml`](compose.yml) file.
 
 ## Cron Job
 
@@ -65,3 +69,4 @@ Note:
 | 0 0 1 * * /report.sh | Esegue a mezzanotte del primo giorno di ogni mese |
 | 0 8-18 * * * /script.sh | Esegue ogni ora dalle 8:00 AM alle 6:00 PM |
 | 0 2 * * 0 /backup.sh | Esegue la domenica alle 2:00 AM |
+

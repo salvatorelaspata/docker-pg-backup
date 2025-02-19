@@ -7,5 +7,5 @@
 # │ │ │ │ │
 # * * * * *  comando_da_eseguire
 
-# each 1 hour
-0 * * * * /backup-script.sh
+# each 30 minutes
+*/30 * * * * /restore-script.sh
